@@ -26,8 +26,8 @@ const store = new MongoDBStore({
 });
 const csrfProtection = csrf();
 
-const privatKey = fs.readFileSync('server.key');
-const certificate = fs.readFileSync('server.cert');
+// const privatKey = fs.readFileSync('server.key');
+// const certificate = fs.readFileSync('server.cert');
 
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -131,8 +131,9 @@ mongoose
     useUnifiedTopology: true
   })
   .then(result => {
-    https.createServer({ key: privatKey, cert: certificate }, app).listen(process.env.PORT || 3000);
-    console.log('Application is running...');
+    // https.createServer({ key: privatKey, cert: certificate }, app)
+    // .listen(process.env.PORT || 3000);
+    app.listen(process.env.PORT || 3000);
   })
   .catch(err => {
     console.log(err);
