@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon app.js",
-    "start": "node app.js",
+    "server": "node app.js",
+    "start": "MONGODB_USER=igor-1987 MONGODB_PASSWORD=7KN2Cwxcc0Rtj7Y4 MONGODB_CLUSTER=cluster0.mgaax.mongodb.net MONGODB_DBNAME=node_dev STRIPE_KEY=sk_test_51Hn3lJHe38XO51gmkwSG8uhzaZ6E2HWpYGtZC9AWaLR7M28E6j0fp2cpJt0svRV4qUIoSJ0Q5OJpWxXLqqK0d8wZ00UCFtsZsr node app.js",
     "dev": "nodemon app.js"
   },
   "author": "",
